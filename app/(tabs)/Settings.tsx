@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Settings = () => {
-  return (
-		<View className="flex-1 items-center justify-center">
+	return (
+		<SafeAreaView className="flex-1 bg-background p-5">
 			<Text>Settings</Text>
-		</View>
-  );
-}
+		</SafeAreaView>
+	);
+};
 
-export default Settings
+export default Settings;
