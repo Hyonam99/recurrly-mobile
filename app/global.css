@@ -6,11 +6,11 @@
 
 @layer components {
 	.tabs-icon {
-		@apply size-12 items-center justify-center;
+		@apply h-12 w-12 items-center justify-center;
 	}
 
 	.tabs-pill {
-		@apply size-12 items-center justify-center rounded-full bg-transparent;
+		@apply h-12 w-12 items-center justify-center rounded-full bg-transparent;
 	}
 
 	.tabs-active {
@@ -18,7 +18,7 @@
 	}
 
 	.tabs-glyph {
-		@apply size-6;
+		@apply h-6 w-6;
 	}
 
 	.home-header {
@@ -30,7 +30,7 @@
 	}
 
 	.home-avatar {
-		@apply size-16 rounded-full;
+		@apply h-16 w-16 rounded-full;
 	}
 
 	.home-user-name {
@@ -38,11 +38,11 @@
 	}
 
 	.home-add-icon {
-		@apply size-12;
+		@apply h-8 w-8 items-center justify-center rounded-full border-2 border-solid border-muted;
 	}
 
 	.home-balance-card {
-		@apply my-2.5 min-h-50 justify-between gap-5 rounded-bl-4xl rounded-tr-4xl bg-accent p-6;
+		@apply my-2 min-h-52 justify-between gap-5 rounded-3xl bg-accent p-6;
 	}
 
 	.home-balance-label {
@@ -62,7 +62,7 @@
 	}
 
 	.list-head {
-		@apply my-5 flex-row items-center justify-between;
+		@apply my-5 flex-row items-center justify-between font-bold;
 	}
 
 	.list-title {
@@ -86,7 +86,7 @@
 	}
 
 	.upcoming-icon {
-		@apply size-14;
+		@apply h-14 w-14;
 	}
 
 	.upcoming-price {
@@ -102,11 +102,11 @@
 	}
 
 	.sub-card {
-		@apply rounded-2xl border border-border p-4;
+		@apply rounded-2xl border border-solid border-border p-4;
 	}
 
 	.sub-card-expanded {
-		@apply bg-subscription;
+		@apply bg-red-600 shadow-lg;
 	}
 
 	.sub-head {
@@ -118,7 +118,7 @@
 	}
 
 	.sub-icon {
-		@apply size-16 rounded-lg;
+		@apply h-16 w-16 rounded-lg;
 	}
 
 	.sub-copy {
@@ -210,7 +210,7 @@
 	}
 
 	.auth-logo-mark {
-		@apply relative size-14 items-center justify-center rounded-2xl bg-accent;
+		@apply relative h-14 w-14 items-center justify-center rounded-2xl bg-accent;
 	}
 
 	.auth-logo-mark-text {
@@ -326,7 +326,7 @@
 	}
 
 	.modal-close {
-		@apply size-8 items-center justify-center rounded-full bg-muted;
+		@apply h-8 w-8 items-center justify-center rounded-full bg-muted;
 	}
 
 	.modal-close-text {
