@@ -1,11 +1,12 @@
 import AuthButton from "@/components/AuthButton";
 import AuthInput from "@/components/AuthInput";
-import { signUpAccount } from "@/utils/auth";
+import { authSession, signUpAccount } from "@/utils/auth";
 import { Link, router } from "expo-router";
 import React, { useMemo, useState } from "react";
 import {
 	KeyboardAvoidingView,
 	Platform,
+	Pressable,
 	ScrollView,
 	Text,
 	View,
@@ -115,6 +116,11 @@ const Signup = () => {
 		}
 	};
 
+	const handleLogoPress = () => {
+		const session = authSession.getSession();
+		router.replace(session ? "/(tabs)/Home" : "/");
+	};
+
 	return (
 		<SafeAreaView className="auth-safe-area">
 			<KeyboardAvoidingView
@@ -128,21 +134,26 @@ const Signup = () => {
 				>
 					<View className="auth-content">
 						<View className="auth-brand-block">
-							<View className="auth-logo-wrap">
-								<View className="auth-logo-mark">
-									<Text className="auth-logo-mark-text">
-										R
-									</Text>
+							<Pressable
+								onPress={handleLogoPress}
+								accessibilityRole="button"
+							>
+								<View className="auth-logo-wrap">
+									<View className="auth-logo-mark">
+										<Text className="auth-logo-mark-text">
+											R
+										</Text>
+									</View>
+									<View>
+										<Text className="auth-wordmark">
+											Recurrly
+										</Text>
+										<Text className="auth-wordmark-sub">
+											Renewal clarity for modern teams
+										</Text>
+									</View>
 								</View>
-								<View>
-									<Text className="auth-wordmark">
-										Recurrly
-									</Text>
-									<Text className="auth-wordmark-sub">
-										Renewal clarity for modern teams
-									</Text>
-								</View>
-							</View>
+							</Pressable>
 							<Text className="auth-title">
 								Create your account
 							</Text>
