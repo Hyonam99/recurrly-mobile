@@ -1,32 +1,16 @@
 import AuthButton from "@/components/AuthButton";
 import { authSession } from "@/utils/auth";
-import { router } from "expo-router";
-import React, { useEffect, useState } from "react";
+import { Redirect, router } from "expo-router";
+import React from "react";
 import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
-	const [isCheckingSession, setIsCheckingSession] = useState(true);
+	const session = authSession.getSession();
 
-	useEffect(() => {
-		const session = authSession.getSession();
-
-		if (session) {
-			router.replace("/(tabs)/Home");
-			return;
-		}
-
-		setIsCheckingSession(false);
-	}, []);
-
-	if (isCheckingSession) {
-		return (
-			<SafeAreaView className="flex-1 items-center justify-center bg-background">
-				<Text className="auth-helper">
-					Checking your Recurrly session…
-				</Text>
-			</SafeAreaView>
-		);
+	// Let Expo Router handle the redirect safely at render time
+	if (session) {
+		return <Redirect href="/(tabs)/Home" />;
 	}
 
 	return (
