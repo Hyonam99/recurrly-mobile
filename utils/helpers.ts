@@ -1,4 +1,4 @@
-import dayjs from "@/utils/dayjs";
+import dayjs from "dayjs";
 
 const formatCurrency = (value: number, currency = "USD"): string => {
 	try {
@@ -26,4 +26,4 @@ const formatStatusLabel = (value?: string): string => {
 	return value.charAt(0).toUpperCase() + value.slice(1);
 };
 
-export { formatCurrency, formatStatusLabel, formatSubscriptionDateTime };
+export { formatCurrency, formatSubscriptionDateTime, formatStatusLabel };

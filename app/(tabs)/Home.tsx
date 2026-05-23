@@ -10,8 +10,8 @@ import {
 import { icons } from "@/constants/icons";
 import images from "@/constants/images";
 import { components } from "@/constants/theme";
-import dayJs from "@/utils/dayjs";
 import { formatCurrency } from "@/utils/helpers";
+import dayJs from "dayjs";
 import React, { useState } from "react";
 import { FlatList, Image, Text, View } from "react-native";
 import {
